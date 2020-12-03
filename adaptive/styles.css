@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;700&display=swap');
+
 *{
   box-sizing: border-box;
+}
+
+body{
+  margin: 0 auto;
+  width: 95%;
+  background-color: #eee;
+  font-family: 'Karla', sans-serif;
 }
 
 .navigation{
@@ -7,6 +16,32 @@
 }
 
 .navigation__item{
+  text-transform: uppercase;
+  flex-grow: 1;
+}
+
+.search{
+  display: flex;
+}
+.search__sort, .search__filter{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.search__filter{
+  padding-right: 20px;
+}
+
+select{
+  border: none;
+  font-weight: 700;
+  background-color: #eee;
+}
+
+label{
+  font-size: 12px;
+  line-height: 2em;
   text-transform: uppercase;
 }
 
@@ -16,6 +51,63 @@
 }
 
 .product{
+  position: relative;
   display: flex;
   flex-direction: column;
+  flex-grow: 0;
+  flex-basis: 20%;
+  background-color: #fff;
+  border: 1px solid #f7f7f7;
+}
+
+.product__image img{
+  width: 100%;
+  margin-top: 30px;
+}
+
+.product__info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+h6{
+  margin: 0;
+  color: #666666;
+  font-size: 14px;
+}
+
+h5{
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.product__offer{
+  position: absolute;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  display: inline-block;
+  background-color: #006eff;
+  color: #fff;
+  padding: 4px 10px;
+}
+
+@media (max-width: 900px){
+  .product{
+    flex: 0 25%;
+  }
+}
+
+@media (max-width: 600px){
+  .product{
+    flex: 0 50%;
+  }
+}
+
+@media (max-width: 400px){
+  .navigation{
+    flex-direction: column;
+  }
 }
