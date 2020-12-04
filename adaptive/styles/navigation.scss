@@ -1,0 +1,41 @@
+select{
+  border: none;
+  font-weight: 700;
+  background-color: #eee;
+}
+
+label{
+  font-size: 12px;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+
+.navigation{
+  display: flex;
+
+  &__item{
+    text-transform: uppercase;
+    flex-grow: 1;
+  }
+}
+
+
+.search{
+  display: flex;
+
+  &__sort, &__filter{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  &__filter{
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 400px){
+  .navigation{
+    flex-direction: column;
+  }
+}
